@@ -1,0 +1,1 @@
+export const tokens = { primary: \#121212\, accent: \#FFC107\ };

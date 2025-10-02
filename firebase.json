@@ -1,0 +1,32 @@
+{
+  "hosting": [
+    {
+      "target": "wildcattrio-web-prod",
+      "public": "apps/wildcattrio-site/public",
+      "ignore": ["**/.*", "**/node_modules/**"],
+      "rewrites": [
+        { "source": "/", "destination": "/index.html" }
+      ]
+    },
+    {
+      "target": "wildcattrio-www",
+      "public": "apps/wildcattrio-site/empty",
+      "ignore": ["**/.*", "**/node_modules/**"],
+      "redirects": [
+        { "source": "/**", "destination": "https://wildcattrio.com", "type": 301 }
+      ]
+    },
+    {
+      "target": "elevatequotes-web-prod",
+      "public": "apps/elevatequotes-site/public",
+      "ignore": ["**/.*", "**/node_modules/**"]
+    },
+    {
+      "target": "calsmartai-web-prod",
+      "public": "apps/calsmartai-site/public",
+      "ignore": ["**/.*", "**/node_modules/**"]
+    }
+  ]
+}
+
+

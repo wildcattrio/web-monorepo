@@ -1,0 +1,30 @@
+name: Deploy to Firebase Hosting
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Firebase Tools
+        run: npm i -g firebase-tools@13.10.2
+      - name: Deploy 3 sites
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        run: |
+          firebase target:apply hosting wildcattrio-web-prod wildcattrio-web-prod --project wildcattrio-web-prod || true
+          firebase target:apply hosting elevatequotes-web-prod elevatequotes-web-prod --project elevatequotes-web-prod || true
+          firebase target:apply hosting calsmartai-web-prod calsmartai-web-prod --project calsmartai-web-prod || true
+          firebase deploy --only hosting:wildcattrio-web-prod --project wildcattrio-web-prod --token "$FIREBASE_TOKEN"
+          firebase deploy --only hosting:elevatequotes-web-prod --project elevatequotes-web-prod --token "$FIREBASE_TOKEN"
+          firebase deploy --only hosting:calsmartai-web-prod --project calsmartai-web-prod --token "$FIREBASE_TOKEN"
+
+
