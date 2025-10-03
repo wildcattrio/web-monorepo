@@ -385,35 +385,34 @@
         </footer>
       </div>
     </div>
-  </body>
-</html>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    function trackClick(event) {
-      var anchor = event.currentTarget;
-      var linkText = (anchor.textContent || '').trim();
-      try {
-        gtag('event', 'click', {
-          link_text: linkText,
-          link_url: anchor.href,
-          outbound: true
-        });
-      } catch (e) {
-        // no-op
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      function trackClick(event) {
+        var anchor = event.currentTarget;
+        var linkText = (anchor.textContent || '').trim();
+        try {
+          gtag('event', 'click', {
+            link_text: linkText,
+            link_url: anchor.href,
+            outbound: true
+          });
+        } catch (e) {
+          // no-op
+        }
       }
-    }
-    var selectors = [
-      'a[href^="https://apps.apple.com"]',
-      'a[href^="https://play.google.com"]'
-    ];
-    selectors.forEach(function (sel) {
-      var nodes = document.querySelectorAll(sel);
-      for (var i = 0; i < nodes.length; i++) {
-        nodes[i].addEventListener('click', trackClick);
-      }
+      var selectors = [
+        'a[href^="https://apps.apple.com"]',
+        'a[href^="https://play.google.com"]'
+      ];
+      selectors.forEach(function (sel) {
+        var nodes = document.querySelectorAll(sel);
+        for (var i = 0; i < nodes.length; i++) {
+          nodes[i].addEventListener('click', trackClick);
+        }
+      });
     });
-  });
-</script>
+  </script>
+  </body>
 </html>
 
 
