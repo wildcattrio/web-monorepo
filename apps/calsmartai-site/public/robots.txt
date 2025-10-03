@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://calsmartai.wildcattrio.com/sitemap.xml
+
+
