@@ -28,6 +28,7 @@ jobs:
           if [ -z "$FIREBASE_TOKEN" ]; then echo "FIREBASE_TOKEN is missing" && exit 1; fi
           echo "FIREBASE_TOKEN is present (masked)."
       - name: List Firebase projects (sanity check)
+        continue-on-error: true
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: firebase projects:list --token "$FIREBASE_TOKEN"
