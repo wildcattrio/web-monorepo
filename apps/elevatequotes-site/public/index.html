@@ -33,7 +33,14 @@
   <body>
     <div class="relative flex h-auto min-h-screen w-full flex-col bg-[#141118] dark group/design-root overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
-        <!-- Header removed per new branding: hero image contains logo/branding -->
+        <!-- Lightweight nav with working anchors -->
+        <header class="flex items-center justify-end px-6 py-3">
+          <nav class="flex items-center gap-6">
+            <a class="text-white/90 text-sm hover:text-white" href="#features">Features</a>
+            <a class="text-white/90 text-sm hover:text-white" href="#pro">Pro</a>
+            <a class="text-white/90 text-sm hover:text-white" href="#faq">FAQ</a>
+          </nav>
+        </header>
         <div class="px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
             <div class="@container">
@@ -49,21 +56,41 @@
                       Elevate Your Day with Inspiring Quotes
                     </h1>
                     <h2 class="text-white text-base font-bold leading-normal sm:text-lg">
-                      Discover a curated collection of quotes to uplift your spirit and enhance your daily life. Share beautifully designed quote art with friends and family.
+                      400,000+ quote database available offline. Discover, create, and share stunning quote art.
                     </h2>
                   </div>
-                  <a
-                    href="https://play.google.com/placeholder"
-                    target="_blank"
-                    rel="noopener"
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#8013ec] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
-                  >
-                    <span class="truncate">Google Play</span>
-                  </a>
+                  <div class="flex items-center gap-3 mt-2">
+                    <a
+                      href="https://play.google.com/placeholder"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex"
+                      aria-label="Get it on Google Play"
+                    >
+                      <img
+                        class="h-10 w-auto"
+                        src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                        alt="Get it on Google Play"
+                      />
+                    </a>
+                    <a
+                      href="https://apps.apple.com/placeholder"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex"
+                      aria-label="Download on the App Store"
+                    >
+                      <img
+                        class="h-10 w-auto"
+                        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                        alt="Download on the App Store"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Features</h2>
+            <h2 id="features" class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Features</h2>
             <div class="flex flex-col gap-10 px-4 py-10 @container">
               <div class="flex flex-col gap-4">
                 <h1
@@ -138,7 +165,7 @@
                 </div>
               </div>
             </div>
-            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Go Pro</h2>
+            <h2 id="pro" class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Go Pro</h2>
             <div class="grid grid-cols-[repeat(auto-fit,minmax(228px,1fr))] gap-2.5 px-4 py-3 @3xl:grid-cols-4">
               <div class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-[#473b54] bg-[#211c27] p-6">
                 <div class="flex flex-col gap-1">
@@ -280,7 +307,7 @@
                 </div>
               </div>
             </div>
-            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">FAQ</h2>
+            <h2 id="faq" class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">FAQ</h2>
             <div class="flex flex-col p-4 gap-3">
               <details class="flex flex-col rounded-lg border border-[#473b54] bg-[#141118] px-[15px] py-[7px] group" open="">
                 <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
