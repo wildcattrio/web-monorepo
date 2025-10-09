@@ -74,39 +74,43 @@
             <div class="@container">
               <div class="p-4">
                 <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4"
-                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAaXAIPEVRk8EyAPTNeA2QUHLRldPMXDY76X8siw4nxyFxegTEwIwn7o-4G357vkZ7mTtSTd7migqJnDgCVOdvYB6FSAmysWDr10osxmqMdgAJkpjPaON0k4w0cADoZfPhxJ9lbx8dCiA33dO6osI5DNooqYk2mf81D3bTcF4gbbhneusP1fzr5w1Mcul150pMju0FdT_vhpW9JbBMRU5MDCJOtwX88JdF8LQKW9xXQcRQtC24hQ9Yu9RuBmzBRbU86rAHEIFNj");'
+                  class="flex min-h-[480px] flex-col gap-4 bg-cover bg-center bg-no-repeat @[480px]:gap-6 @[480px]:rounded-lg items-center justify-end p-4"
+                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.45) 100%), url("/images/hero_2048x1000.webp");'
                 >
-                  <div class="flex flex-col gap-2 text-center">
-                    <h1
-                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
-                    >
-                      Point. Snap. Logged.
-                    </h1>
-                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                      Effortlessly track your calories with CalSmart AI. Just point your camera, snap a photo of your food, and let our AI log it for you. It's that simple.
-                    </h2>
-                  </div>
-                  <div class="flex-wrap gap-3 flex justify-center">
+                  <div class="flex items-center gap-3 mt-2 flex-col @[480px]:flex-row w-full justify-center">
                     <a
-                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#13ec13] text-[#111811] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
-                      href="https://apps.apple.com/placeholder"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <span class="truncate">App Store</span>
-                    </a>
-                    <a
-                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#283928] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
                       href="https://play.google.com/placeholder"
                       target="_blank"
-                      rel="noopener"
+                      rel="noopener noreferrer"
+                      class="inline-flex h-12 w-full max-w-[260px] @[480px]:w-[180px] items-center justify-center rounded-md overflow-hidden bg-black border border-white/80 mx-auto"
+                      aria-label="Get it on Google Play"
                     >
-                      <span class="truncate">Google Play</span>
+                      <img
+                        class="h-full w-full object-contain"
+                        src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                        alt="Get it on Google Play"
+                      />
+                    </a>
+                    <a
+                      href="https://apps.apple.com/placeholder"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex h-12 w-full max-w-[260px] @[480px]:w-[180px] items-center justify-center rounded-md overflow-hidden bg-black border border-white/80 mx-auto"
+                      aria-label="Download on the App Store"
+                    >
+                      <img
+                        class="h-full w-full object-contain"
+                        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                        alt="Download on the App Store"
+                      />
                     </a>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="px-4 pt-6">
+              <h1 class="text-white text-3xl font-black leading-tight tracking-[-0.02em] sm:text-4xl">Point. Snap. Logged.</h1>
+              <p class="text-white/90 text-base mt-2 max-w-[860px]">Effortlessly track your calories with CalSmart AI. Just point your camera, snap a photo of your food, and let our AI log it for you. It's that simple.</p>
             </div>
             <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">How It Works</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
