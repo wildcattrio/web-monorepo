@@ -16,36 +16,84 @@ jobs:
           node-version: '22'
       - name: Install Firebase Tools
         run: npm i -g firebase-tools@13.10.2
+      - name: Write service account key
+        if: ${{ secrets.FIREBASE_SERVICE_ACCOUNT != '' }}
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          echo "${FIREBASE_SERVICE_ACCOUNT}" > $RUNNER_TEMP/firebase-sa.json
+          echo "Wrote service account key to $RUNNER_TEMP/firebase-sa.json"
       - name: Show environment
         run: |
           node -v
           npm -v
           firebase --version
-      - name: Write service account key
+      - name: Validate FIREBASE_TOKEN available
+        if: ${{ secrets.FIREBASE_SERVICE_ACCOUNT == '' }}
         env:
-          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: |
-          if [ -z "$FIREBASE_SERVICE_ACCOUNT" ]; then echo "FIREBASE_SERVICE_ACCOUNT secret missing" && exit 1; fi
-          echo "$FIREBASE_SERVICE_ACCOUNT" > "$RUNNER_TEMP/firebase-sa.json"
-          echo "Service account key written to $RUNNER_TEMP/firebase-sa.json"
+          if [ -z "$FIREBASE_TOKEN" ]; then echo "FIREBASE_TOKEN is missing" && exit 1; fi
+          echo "FIREBASE_TOKEN is present (masked)."
+      - name: List Firebase projects (sanity check)
+        continue-on-error: true
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ env.GOOGLE_APPLICATION_CREDENTIALS }}
+        run: |
+          if [ -f "$RUNNER_TEMP/firebase-sa.json" ]; then
+            export GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/firebase-sa.json
+            firebase projects:list
+          else
+            firebase projects:list --token "$FIREBASE_TOKEN"
+          fi
       - name: Prepare Hosting targets (no-op if exist)
         env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/firebase-sa.json
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ env.GOOGLE_APPLICATION_CREDENTIALS }}
         run: |
-          firebase target:apply hosting wildcattrio-web-prod wildcattrio-web-prod --project wildcattrio-web-prod || true
-          firebase target:apply hosting elevatequotes-web-prod elevatequotes-web-prod --project elevatequotes-web-prod || true
-          firebase target:apply hosting calsmartai-web-prod calsmartai-web-prod --project calsmartai-web-prod || true
+          if [ -f "$RUNNER_TEMP/firebase-sa.json" ]; then
+            export GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/firebase-sa.json
+            firebase target:apply hosting wildcattrio-web-prod wildcattrio-web-prod --project wildcattrio-web-prod || true
+            firebase target:apply hosting elevatequotes-web-prod elevatequotes-web-prod --project elevatequotes-web-prod || true
+            firebase target:apply hosting calsmartai-web-prod calsmartai-web-prod --project calsmartai-web-prod || true
+          else
+            firebase target:apply hosting wildcattrio-web-prod wildcattrio-web-prod --project wildcattrio-web-prod --token "$FIREBASE_TOKEN" || true
+            firebase target:apply hosting elevatequotes-web-prod elevatequotes-web-prod --project elevatequotes-web-prod --token "$FIREBASE_TOKEN" || true
+            firebase target:apply hosting calsmartai-web-prod calsmartai-web-prod --project calsmartai-web-prod --token "$FIREBASE_TOKEN" || true
+          fi
       - name: Deploy Corporate (wildcattrio-web-prod)
         env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/firebase-sa.json
-        run: firebase deploy --only hosting:wildcattrio-web-prod --project wildcattrio-web-prod --non-interactive --debug
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ env.GOOGLE_APPLICATION_CREDENTIALS }}
+        run: |
+          if [ -f "$RUNNER_TEMP/firebase-sa.json" ]; then
+            export GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/firebase-sa.json
+            firebase deploy --only hosting:wildcattrio-web-prod --project wildcattrio-web-prod --non-interactive --debug
+          else
+            firebase deploy --only hosting:wildcattrio-web-prod --project wildcattrio-web-prod --token "$FIREBASE_TOKEN" --non-interactive --debug
+          fi
       - name: Deploy Elevate Quotes (elevatequotes-web-prod)
         env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/firebase-sa.json
-        run: firebase deploy --only hosting:elevatequotes-web-prod --project elevatequotes-web-prod --non-interactive --debug
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ env.GOOGLE_APPLICATION_CREDENTIALS }}
+        run: |
+          if [ -f "$RUNNER_TEMP/firebase-sa.json" ]; then
+            export GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/firebase-sa.json
+            firebase deploy --only hosting:elevatequotes-web-prod --project elevatequotes-web-prod --non-interactive --debug
+          else
+            firebase deploy --only hosting:elevatequotes-web-prod --project elevatequotes-web-prod --token "$FIREBASE_TOKEN" --non-interactive --debug
+          fi
       - name: Deploy CalSmart AI (calsmartai-web-prod)
         env:
-          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/firebase-sa.json
-        run: firebase deploy --only hosting:calsmartai-web-prod --project calsmartai-web-prod --non-interactive --debug
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ env.GOOGLE_APPLICATION_CREDENTIALS }}
+        run: |
+          if [ -f "$RUNNER_TEMP/firebase-sa.json" ]; then
+            export GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/firebase-sa.json
+            firebase deploy --only hosting:calsmartai-web-prod --project calsmartai-web-prod --non-interactive --debug
+          else
+            firebase deploy --only hosting:calsmartai-web-prod --project calsmartai-web-prod --token "$FIREBASE_TOKEN" --non-interactive --debug
+          fi
 
 
