@@ -26,9 +26,11 @@
 ## Business / Contact
 - Company: WildCat Trio Limited
 - Address: 20 Harcourt Street, Dublin 2, D02 H364, Ireland
-- Phone: +353 892355536
+- Phone: not listed on site UI (use email channels)
 - Emails: admin@wildcattrio.com, elevatequotes@wildcattrio.com, calsmartai@wildcattrio.com
-- Privacy (EQ): https://sites.google.com/view/elevatequotes/privacy-policy
+- Legal pages (static):
+  - Corporate: /privacy.html, /terms.html
+  - Elevate Quotes: /privacy.html, /terms.html
 
 ## Current Status
 - Corporate site live with new landing.
@@ -57,6 +59,26 @@
   - Features section updated to include: "Elevate Your Day with Inspiring Quotes" + "400,000+ quote database available offline. Discover, create, and share stunning quote art." and removed prior "Enhance Your Daily Inspiration" heading.
   - Euro pricing set for EQ: €4.60 (monthly), €18.50 (annual), €37.00 (lifetime).
   - FAQ additions for EQ: notifications, watermark export, supported devices; de-duplicated repeated items (one duplicate "Is my data private?" may remain; to remove next pass).
+
+### 2025-10-10 Web updates
+- Corporate (wildcattrio.com)
+  - Added legal pages `apps/wildcattrio-site/public/privacy.html` and `terms.html`; footer now links to them.
+  - Removed phone number from Contact section; copyright updated to 2025.
+  - Product tiles now use rounded app icons: `images/eq_foreground_512.png` and `images/calsmart_ai.png`.
+- Elevate Quotes (elevatequotes.wildcattrio.com)
+  - Removed duplicate bottom "Is my data private?" FAQ.
+  - Hero: underline via pseudo-element; background unified with Go Pro tiles; official store badges with matched sizes.
+  - Monthly plan shows "7‑Day Free Trial" tag; added Contact mailto and footer plain-text email.
+  - Mobile: responsive page padding and grids (features and pricing) for better phone layout.
+  - Legal pages added (`apps/elevatequotes-site/public/privacy.html`, `terms.html`) and footer links updated.
+- CalSmart AI (calsmartai.wildcattrio.com)
+  - New hero image at `apps/calsmartai-site/public/images/hero_2048x1000.webp`; headline/paragraph moved below hero.
+  - Store CTAs switched to official badges; removed outer borders and size-matched badges.
+  - Mobile layout widened (responsive paddings; responsive grids in "How It Works" and "Key Features").
+  - Footer year updated to 2025. Removed dark gradient over hero to preserve bright text.
+
+Notes
+- Preferred hero artwork dimension: 2048×1000 (2.048:1). Place under each site's `public/images/`.
 
 Notes
 - In GA4 UI, “Conversions” are now shown as “Key events”. Star events in Admin → Data display → Events → Recent events to mark as key events.
