@@ -1,20 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Elevate Quotes brings you inspiring quotes, beautiful quote art, and easy sharing to uplift your day." />
-    <link rel="canonical" href="https://elevatequotes.wildcattrio.com" />
-    <meta property="og:title" content="Elevate Quotes" />
-    <meta property="og:description" content="Discover inspiring quotes and share stunning quote art. Elevate your day." />
-    <meta property="og:url" content="https://elevatequotes.wildcattrio.com" />
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1KYQNS78FJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1KYQNS78FJ');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover over 400,000 inspiring quotes. Create stunning quote art, share with friends, and elevate your daily motivation with Elevate Quotes." />
+    <meta property="og:title" content="Elevate Quotes — 400,000 reasons to be inspired" />
+    <meta property="og:description" content="Discover over 400,000 inspiring quotes. Create stunning quote art, share with friends, and elevate your daily motivation." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuBfbUCiNVmp-u92ixiYYaymDW4kpa_MR8Z92xSS0GqWu0VF6HgvGY8D8MZAh4wJjbdsJoxqY7-oSat05bQfZhCitfTqJssocorafti_1NEnGR75ZEuuvBYtXx_7JFF6GxSAcJ3pYbXmoVU_4lDeRRD-9FdU8yovGmJILH3-CqRJVRPJlMRhi5yZsyx-jd3guZ4FzmV32xEE2Yi_zWVbTZx49RA2RKoA8-XQd8yX85ykjEB33uCYjHLUZiPW8FuoHy7QqdvVOsmb" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#141118" />
+    <meta property="og:url" content="https://elevatequotes.wildcattrio.com/" />
+    <link rel="canonical" href="https://elevatequotes.wildcattrio.com/" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Roboto:wght@700;900&display=swap" rel="stylesheet" />
     <link
       rel="stylesheet"
       as="style"
@@ -22,95 +27,86 @@
       href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
     />
 
-    <title>Elevate Quotes</title>
+    <title>Elevate Quotes — 400,000 reasons to be inspired</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <style>
-      /* Hero title underline via pseudo-element for exact width */
-      .hero-title { position: relative; display: inline-block; padding-bottom: 0.5rem; }
-      .hero-title::after { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 4px; background-color: #7b3ff2; }
-    </style>
-    <!-- GA4: Elevate Quotes -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-369RGBYV11"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-369RGBYV11');
-    </script>
   </head>
   <body>
     <div class="relative flex h-auto min-h-screen w-full flex-col bg-[#141118] dark group/design-root overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
-        <!-- Lightweight nav with working anchors -->
-        <header class="flex items-center justify-end px-6 py-3">
-          <nav class="flex items-center gap-6">
-            <a class="text-white/90 text-sm hover:text-white" href="#features">Features</a>
-            <a class="text-white/90 text-sm hover:text-white" href="#pro">Pro</a>
-            <a class="text-white/90 text-sm hover:text-white" href="#faq">FAQ</a>
-            <a class="text-white/90 text-sm hover:text-white" href="mailto:elevatequotes@wildcattrio.com">Contact</a>
-          </nav>
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#302839] px-10 py-3">
+          <div class="flex items-center gap-4 text-white">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Elevate Quotes</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-white text-sm font-medium leading-normal" href="#">Features</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Pro</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">FAQ</a>
+            </div>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.elevatequotes.app"
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#8013ec] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Download</span>
+            </a>
+          </div>
         </header>
-        <div class="px-4 sm:px-6 lg:px-10 xl:px-40 flex flex-1 justify-center py-5">
+        <div class="px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
             <div class="@container">
-              <div class="p-4">
+              <div class="@[480px]:p-4">
                 <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 rounded-lg border border-solid border-[#473b54] items-center justify-center p-6 bg-[#211c27]"
-                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.35) 100%), url("/images/feature_graphic_1024x500.png");'
+                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4"
+                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBfbUCiNVmp-u92ixiYYaymDW4kpa_MR8Z92xSS0GqWu0VF6HgvGY8D8MZAh4wJjbdsJoxqY7-oSat05bQfZhCitfTqJssocorafti_1NEnGR75ZEuuvBYtXx_7JFF6GxSAcJ3pYbXmoVU_4lDeRRD-9FdU8yovGmJILH3-CqRJVRPJlMRhi5yZsyx-jd3guZ4FzmV32xEE2Yi_zWVbTZx49RA2RKoA8-XQd8yX85ykjEB33uCYjHLUZiPW8FuoHy7QqdvVOsmb");'
                 >
-                  <div class="flex flex-col gap-2 text-center max-w-[900px] items-center">
-                    <h1 class="hero-title text-white font-extrabold tracking-[0.02em] text-4xl sm:text-5xl md:text-6xl" style="font-family: 'Cinzel', serif;">
-                      ELEVATE QUOTES
+                  <div class="flex flex-col gap-2 text-center">
+                    <h1
+                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                    >
+                      Elevate Your Day with Inspiring Quotes
                     </h1>
-                    <h2 class="text-white font-bold leading-tight text-2xl sm:text-3xl md:text-4xl" style="font-family: 'Roboto', sans-serif;">
-                      Create Personalize Share Inspiration
+                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                      Discover a curated collection of quotes to uplift your spirit and enhance your daily life. Share beautifully designed quote art with friends and family.
                     </h2>
                   </div>
-                  <div class="flex items-center gap-3 mt-2 flex-col @[480px]:flex-row w-full justify-center">
-                    <a
-                      href="https://play.google.com/placeholder"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="inline-flex"
-                      aria-label="Get it on Google Play"
-                    >
-                      <img
-                        class="h-12 w-auto scale-[1.08]"
-                        src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                        alt="Get it on Google Play"
-                      />
-                    </a>
-                    <a
-                      href="https://apps.apple.com/placeholder"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="inline-flex"
-                      aria-label="Download on the App Store"
-                    >
-                      <img
-                        class="h-12 w-auto scale-[0.86]"
-                        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                        alt="Download on the App Store"
-                      />
-                    </a>
-                  </div>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.elevatequotes.app"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#8013ec] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                  >
+                    <span class="truncate">Download</span>
+                  </a>
                 </div>
               </div>
             </div>
-            <h2 id="features" class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Features</h2>
-            <div class="flex flex-col gap-10 px-4 sm:px-6 lg:px-10 py-10 @container">
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Features</h2>
+            <div class="flex flex-col gap-10 px-4 py-10 @container">
               <div class="flex flex-col gap-4">
-                <h1 class="text-white tracking-light text-[28px] font-bold leading-tight @[480px]:text-3xl max-w-[720px]">
-                  Elevate Your Day with Inspiring Quotes
+                <h1
+                  class="text-white tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
+                >
+                  Enhance Your Daily Inspiration
                 </h1>
-                <p class="text-white text-base font-normal leading-normal max-w-[720px]">
-                  400,000+ quote database available offline. Discover, create, and share stunning quote art.
-                </p>
                 <p class="text-white text-base font-normal leading-normal max-w-[720px]">
                   Elevate Quotes offers a range of features designed to make finding, creating, and sharing inspirational quotes effortless and enjoyable.
                 </p>
               </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 p-0">
+              <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-0">
                 <div class="flex flex-1 gap-3 rounded-lg border border-[#473b54] bg-[#211c27] p-4 flex-col">
                   <div class="text-white" data-icon="MagnifyingGlass" data-size="24px" data-weight="regular">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
@@ -173,16 +169,13 @@
                 </div>
               </div>
             </div>
-            <h2 id="pro" class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Go Pro</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 px-4 sm:px-6 lg:px-10 py-3 @3xl:grid-cols-4">
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Go Pro</h2>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(228px,1fr))] gap-2.5 px-4 py-3 @3xl:grid-cols-4">
               <div class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-[#473b54] bg-[#211c27] p-6">
                 <div class="flex flex-col gap-1">
-                  <div class="flex items-center justify-between">
-                    <h1 class="text-white text-base font-bold leading-tight">Monthly</h1>
-                    <p class="text-white text-xs font-medium leading-normal tracking-[0.015em] rounded-lg bg-[#8013ec] px-3 py-[3px] text-center">7-Day Free Trial</p>
-                  </div>
+                  <h1 class="text-white text-base font-bold leading-tight">Monthly</h1>
                   <p class="flex items-baseline gap-1 text-white">
-                    <span class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">€4.60</span>
+                    <span class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">$4.99</span>
                     <span class="text-white text-base font-bold leading-tight">/month</span>
                   </p>
                 </div>
@@ -225,7 +218,7 @@
                     <p class="text-white text-xs font-medium leading-normal tracking-[0.015em] rounded-lg bg-[#8013ec] px-3 py-[3px] text-center">7-Day Free Trial</p>
                   </div>
                   <p class="flex items-baseline gap-1 text-white">
-                    <span class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">€18.50</span>
+                    <span class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">$29.99</span>
                     <span class="text-white text-base font-bold leading-tight">/year</span>
                   </p>
                 </div>
@@ -275,7 +268,7 @@
                     <h1 class="text-white text-base font-bold leading-tight">Lifetime</h1>
                     <p class="text-white text-xs font-medium leading-normal tracking-[0.015em] rounded-lg bg-[#8013ec] px-3 py-[3px] text-center">Best Value</p>
                   </div>
-                  <span class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">€37.00</span>
+                  <span class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">$99.99</span>
                 </div>
                 <button
                   class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#302839] text-white text-sm font-bold leading-normal tracking-[0.015em]"
@@ -318,7 +311,7 @@
                 </div>
               </div>
             </div>
-            <h2 id="faq" class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">FAQ</h2>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">FAQ</h2>
             <div class="flex flex-col p-4 gap-3">
               <details class="flex flex-col rounded-lg border border-[#473b54] bg-[#141118] px-[15px] py-[7px] group" open="">
                 <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
@@ -330,7 +323,7 @@
                   </div>
                 </summary>
                 <p class="text-[#ab9db9] text-sm font-normal leading-normal pb-2">
-                  Yes. Your data stays on your device and in your private backups. We never sell or share personal information.
+                  We take your privacy seriously. Your data is encrypted and stored securely. We do not share your personal information with third parties.
                 </p>
               </details>
               <details class="flex flex-col rounded-lg border border-[#473b54] bg-[#141118] px-[15px] py-[7px] group">
@@ -343,83 +336,24 @@
                   </div>
                 </summary>
                 <p class="text-[#ab9db9] text-sm font-normal leading-normal pb-2">
-                  Yes. Elevate Quotes includes an offline database so you can browse and create quote art without internet access.
-                </p>
-              </details>
-              <details class="flex flex-col rounded-lg border border-[#473b54] bg-[#141118] px-[15px] py-[7px] group">
-                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
-                  <p class="text-white text-sm font-medium leading-normal">How do I upgrade or cancel Pro?</p>
-                  <div class="text-white group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-                    </svg>
-                  </div>
-                </summary>
-                <p class="text-[#ab9db9] text-sm font-normal leading-normal pb-2">
-                  Manage your subscription through the App Store or Google Play. You can upgrade, cancel, or switch plans at any time from the store settings.
-                </p>
-              </details>
-              <details class="flex flex-col rounded-lg border border-[#473b54] bg-[#141118] px-[15px] py-[7px] group">
-                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
-                  <p class="text-white text-sm font-medium leading-normal">Which devices are supported?</p>
-                  <div class="text-white group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-                    </svg>
-                  </div>
-                </summary>
-                <p class="text-[#ab9db9] text-sm font-normal leading-normal pb-2">
-                  Elevate Quotes works on modern iOS and Android phones and tablets. We recommend iOS 15+ or Android 10+ for the best experience.
-                </p>
-              </details>
-              <details class="flex flex-col rounded-lg border border-[#473b54] bg-[#141118] px-[15px] py-[7px] group">
-                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
-                  <p class="text-white text-sm font-medium leading-normal">How do notifications work?</p>
-                  <div class="text-white group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-                    </svg>
-                  </div>
-                </summary>
-                <p class="text-[#ab9db9] text-sm font-normal leading-normal pb-2">
-                  You can enable hourly reminders in the app. We schedule smart delivery windows so you’re not disturbed at night and can adjust frequency at any time in Settings.
-                </p>
-              </details>
-              <details class="flex flex-col rounded-lg border border-[#473b54] bg-[#141118] px-[15px] py-[7px] group">
-                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
-                  <p class="text-white text-sm font-medium leading-normal">Can I export/share quote art without watermark?</p>
-                  <div class="text-white group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-                    </svg>
-                  </div>
-                </summary>
-                <p class="text-[#ab9db9] text-sm font-normal leading-normal pb-2">
-                  Yes. Pro plans let you export high‑resolution images without watermark and share directly to social platforms or save to your gallery.
+                  Yes, Elevate Quotes has an offline database of quotes. You can access a wide selection of quotes even without an internet connection.
                 </p>
               </details>
             </div>
-            
           </div>
         </div>
         <footer class="flex justify-center">
           <div class="flex max-w-[960px] flex-1 flex-col">
             <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
               <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                <a class="text-[#ab9db9] text-base font-normal leading-normal min-w-40" href="/privacy.html">Privacy Policy</a>
-                <a class="text-[#ab9db9] text-base font-normal leading-normal min-w-40" href="/terms.html">Terms of Service</a>
+                <a class="text-[#ab9db9] text-base font-normal leading-normal min-w-40" href="privacy.html">Privacy Policy</a>
+                <a class="text-[#ab9db9] text-base font-normal leading-normal min-w-40" href="terms.html">Terms of Service</a>
               </div>
-              <p class="text-[#ab9db9] text-base font-normal leading-normal">
-                Contact: <a class="underline hover:text-white" href="mailto:elevatequotes@wildcattrio.com">elevatequotes@wildcattrio.com</a>
-              </p>
               <p class="text-[#ab9db9] text-base font-normal leading-normal">© 2025 Elevate Quotes. All rights reserved.</p>
             </footer>
           </div>
         </footer>
       </div>
     </div>
-  
   </body>
 </html>
-
-
