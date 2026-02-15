@@ -6,17 +6,20 @@
   - Corporate: apps/wildcattrio-site/public/index.html
   - Elevate Quotes: apps/elevatequotes-site/public/index.html
   - CalSmart AI: apps/calsmartai-site/public/index.html
+  - Inward: apps/inward-site/public/index.html
 
 ## Custom Domains
 - Corporate: wildcattrio.com (with www  apex redirect)
 - Products:
   - Elevate Quotes: elevatequotes.wildcattrio.com
   - CalSmart AI: calsmartai.wildcattrio.com
+  - Inward: inward.wildcattrio.com
 
 ## Firebase Hosting Projects
 - wildcattrio-web-prod  wildcattrio.com
 - elevatequotes-web-prod  elevatequotes.wildcattrio.com
 - calsmartai-web-prod  calsmartai.wildcattrio.com
+- inward-web-prod  inward.wildcattrio.com
 
 ## CI/CD
 - GitHub Actions workflow: .github/workflows/deploy.yml
@@ -27,7 +30,7 @@
 - Company: WildCat Trio Limited
 - Address: 20 Harcourt Street, Dublin 2, D02 H364, Ireland
 - Phone: not listed on site UI (use email channels)
-- Emails: admin@wildcattrio.com, elevatequotes@wildcattrio.com, calsmartai@wildcattrio.com
+- Emails: admin@wildcattrio.com, elevatequotes@wildcattrio.com, calsmartai@wildcattrio.com, inward@wildcattrio.com
 - Legal pages (static):
   - Corporate: /privacy.html, /terms.html
   - Elevate Quotes: /privacy.html, /terms.html

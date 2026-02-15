@@ -18,6 +18,11 @@
       "hosting": {
         "calsmartai-web-prod": ["calsmartai-web-prod"]
       }
+    },
+    "inward-web-prod": {
+      "hosting": {
+        "inward-web-prod": ["inward-web-prod"]
+      }
     }
   }
 }
