@@ -1,133 +1,425 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Elevate Quotes — 400,000+ inspirational quotes. Create beautiful quote cards. Browse by author, category, or topic. Free on Google Play." />
+    <meta name="description" content="Elevate Quotes brings you inspiring quotes, beautiful quote art, and easy sharing to uplift your day." />
     <link rel="canonical" href="https://elevatequotes.wildcattrio.com" />
-    <meta property="og:title" content="Elevate Quotes — 400,000 reasons to be inspired" />
-    <meta property="og:description" content="Find the right words for any moment. 400,000+ quotes, stunning quote cards, daily inspiration. Free on Google Play." />
+    <meta property="og:title" content="Elevate Quotes" />
+    <meta property="og:description" content="Discover inspiring quotes and share stunning quote art. Elevate your day." />
     <meta property="og:url" content="https://elevatequotes.wildcattrio.com" />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuBfbUCiNVmp-u92ixiYYaymDW4kpa_MR8Z92xSS0GqWu0VF6HgvGY8D8MZAh4wJjbdsJoxqY7-oSat05bQfZhCitfTqJssocorafti_1NEnGR75ZEuuvBYtXx_7JFF6GxSAcJ3pYbXmoVU_4lDeRRD-9FdU8yovGmJILH3-CqRJVRPJlMRhi5yZsyx-jd3guZ4FzmV32xEE2Yi_zWVbTZx49RA2RKoA8-XQd8yX85ykjEB33uCYjHLUZiPW8FuoHy7QqdvVOsmb" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#141118" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700" />
-    <title>Elevate Quotes — 400,000 reasons to be inspired</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              gold: {
-                400: '#E8A832',
-                500: '#D4A230',
-                600: '#B8891A',
-              }
-            }
-          }
-        }
-      }
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Roboto:wght@700;900&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Elevate Quotes</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style>
-      body { font-family: 'Inter', sans-serif; background: #000000; }
-      .font-serif { font-family: 'Playfair Display', serif; }
-      .gold-glow { text-shadow: 0 0 40px rgba(212, 162, 48, 0.3); }
-      @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-      .float { animation: float 6s ease-in-out infinite; }
+      /* Hero title underline via pseudo-element for exact width */
+      .hero-title { position: relative; display: inline-block; padding-bottom: 0.5rem; }
+      .hero-title::after { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 4px; background-color: #7b3ff2; }
     </style>
+    <!-- GA4: Elevate Quotes -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-369RGBYV11"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-369RGBYV11');
+    </script>
   </head>
-  <body class="text-gray-300 antialiased">
-    <!-- Hero -->
-    <section class="min-h-screen flex flex-col items-center justify-center px-4 text-center relative overflow-hidden">
-      <!-- Decorative circles -->
-      <div class="absolute top-20 left-10 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-20 right-10 w-80 h-80 bg-gold-400/5 rounded-full blur-3xl"></div>
-
-      <div class="relative z-10 max-w-3xl">
-        <p class="text-gold-400 font-medium tracking-widest uppercase text-sm mb-6">400,000+ Quotes</p>
-        <h1 class="font-serif text-5xl sm:text-7xl font-bold text-white leading-tight mb-6 gold-glow">
-          Find the words.<br/>Share the feeling.
-        </h1>
-        <p class="text-lg sm:text-xl text-gray-400 max-w-xl mx-auto mb-10 leading-relaxed">
-          Inspirational quotes from ancient philosophers to modern thought leaders. Create stunning quote cards. Get daily wisdom delivered to your screen.
-        </p>
-        <a href="https://play.google.com/store/apps/details?id=com.wildcattrio.elevatequotes" class="inline-flex items-center gap-3 bg-gold-500 text-black font-semibold px-8 py-4 rounded-full text-lg hover:bg-gold-400 transition-colors shadow-lg shadow-gold-500/20">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302-2.302 2.302L15.396 12l2.302-2.302zM5.864 2.658L16.8 8.991l-2.302 2.302-8.634-8.635z"/></svg>
-          Get it on Google Play
-        </a>
-      </div>
-
-      <!-- Sample quote -->
-      <div class="relative z-10 mt-16 float">
-        <div class="bg-white/5 backdrop-blur-sm border border-gold-500/20 rounded-2xl p-8 max-w-md mx-auto">
-          <p class="font-serif text-xl text-white italic leading-relaxed">"The only way to do great work is to love what you do."</p>
-          <p class="text-gold-400 mt-4 text-sm font-medium">— Steve Jobs</p>
+  <body>
+    <div class="relative flex h-auto min-h-screen w-full flex-col bg-[#141118] dark group/design-root overflow-x-hidden" style='font-family: Newsreader, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- Lightweight nav with working anchors -->
+        <header class="flex items-center justify-end px-6 py-3">
+          <nav class="flex items-center gap-6">
+            <a class="text-white/90 text-sm hover:text-white" href="#features">Features</a>
+            <a class="text-white/90 text-sm hover:text-white" href="#pro">Pro</a>
+            <a class="text-white/90 text-sm hover:text-white" href="#faq">FAQ</a>
+            <a class="text-white/90 text-sm hover:text-white" href="mailto:elevatequotes@wildcattrio.com">Contact</a>
+          </nav>
+        </header>
+        <div class="px-4 sm:px-6 lg:px-10 xl:px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="@container">
+              <div class="p-4">
+                <div
+                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 rounded-lg border border-solid border-[#473b54] items-center justify-center p-6 bg-[#211c27]"
+                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.35) 100%), url("/images/feature_graphic_1024x500.png");'
+                >
+                  <div class="flex flex-col gap-2 text-center max-w-[900px] items-center">
+                    <h1 class="hero-title text-white font-extrabold tracking-[0.02em] text-4xl sm:text-5xl md:text-6xl" style="font-family: 'Cinzel', serif;">
+                      ELEVATE QUOTES
+                    </h1>
+                    <h2 class="text-white font-bold leading-tight text-2xl sm:text-3xl md:text-4xl" style="font-family: 'Roboto', sans-serif;">
+                      Create Personalize Share Inspiration
+                    </h2>
+                  </div>
+                  <div class="flex items-center gap-3 mt-2 flex-col @[480px]:flex-row w-full justify-center">
+                    <a
+                      href="https://play.google.com/placeholder"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex"
+                      aria-label="Get it on Google Play"
+                    >
+                      <img
+                        class="h-12 w-auto scale-[1.08]"
+                        src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                        alt="Get it on Google Play"
+                      />
+                    </a>
+                    <a
+                      href="https://apps.apple.com/placeholder"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex"
+                      aria-label="Download on the App Store"
+                    >
+                      <img
+                        class="h-12 w-auto scale-[0.86]"
+                        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                        alt="Download on the App Store"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 id="features" class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Features</h2>
+            <div class="flex flex-col gap-10 px-4 sm:px-6 lg:px-10 py-10 @container">
+              <div class="flex flex-col gap-4">
+                <h1 class="text-white tracking-light text-[28px] font-bold leading-tight @[480px]:text-3xl max-w-[720px]">
+                  Elevate Your Day with Inspiring Quotes
+                </h1>
+                <p class="text-white text-base font-normal leading-normal max-w-[720px]">
+                  400,000+ quote database available offline. Discover, create, and share stunning quote art.
+                </p>
+                <p class="text-white text-base font-normal leading-normal max-w-[720px]">
+                  Elevate Quotes offers a range of features designed to make finding, creating, and sharing inspirational quotes effortless and enjoyable.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 p-0">
+                <div class="flex flex-1 gap-3 rounded-lg border border-[#473b54] bg-[#211c27] p-4 flex-col">
+                  <div class="text-white" data-icon="MagnifyingGlass" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h2 class="text-white text-base font-bold leading-tight">Search &amp; Browse</h2>
+                    <p class="text-[#ab9db9] text-sm font-normal leading-normal">
+                      Easily find quotes by keywords, authors, or categories. Explore a vast library of curated quotes to suit any mood or occasion.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-1 gap-3 rounded-lg border border-[#473b54] bg-[#211c27] p-4 flex-col">
+                  <div class="text-white" data-icon="Image" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V158.75l-26.07-26.06a16,16,0,0,0-22.63,0l-20,20-44-44a16,16,0,0,0-22.62,0L40,149.37V56ZM40,172l52-52,80,80H40Zm176,28H194.63l-36-36,20-20L216,181.38V200ZM144,100a12,12,0,1,1,12,12A12,12,0,0,1,144,100Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h2 class="text-white text-base font-bold leading-tight">Background Generator</h2>
+                    <p class="text-[#ab9db9] text-sm font-normal leading-normal">
+                      Create stunning quote art with customizable backgrounds, fonts, and layouts. Transform your favorite quotes into shareable masterpieces.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-1 gap-3 rounded-lg border border-[#473b54] bg-[#211c27] p-4 flex-col">
+                  <div class="text-white" data-icon="Share" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M229.66,109.66l-48,48a8,8,0,0,1-11.32-11.32L204.69,112H165a88,88,0,0,0-85.23,66,8,8,0,0,1-15.5-4A103.94,103.94,0,0,1,165,96h39.71L170.34,61.66a8,8,0,0,1,11.32-11.32l48,48A8,8,0,0,1,229.66,109.66ZM192,208H40V88a8,8,0,0,0-16,0V208a16,16,0,0,0,16,16H192a8,8,0,0,0,0-16Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h2 class="text-white text-base font-bold leading-tight">High-Quality Sharing</h2>
+                    <p class="text-[#ab9db9] text-sm font-normal leading-normal">
+                      Share your quote art in high resolution across all your social media platforms. Impress your followers with visually appealing and impactful content.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-1 gap-3 rounded-lg border border-[#473b54] bg-[#211c27] p-4 flex-col">
+                  <div class="text-white" data-icon="Clock" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h2 class="text-white text-base font-bold leading-tight">Hourly Notifications</h2>
+                    <p class="text-[#ab9db9] text-sm font-normal leading-normal">
+                      Receive hourly notifications with new quotes to keep you motivated and inspired throughout the day. Start each hour with a fresh dose of positivity.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 id="pro" class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Go Pro</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 px-4 sm:px-6 lg:px-10 py-3 @3xl:grid-cols-4">
+              <div class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-[#473b54] bg-[#211c27] p-6">
+                <div class="flex flex-col gap-1">
+                  <div class="flex items-center justify-between">
+                    <h1 class="text-white text-base font-bold leading-tight">Monthly</h1>
+                    <p class="text-white text-xs font-medium leading-normal tracking-[0.015em] rounded-lg bg-[#8013ec] px-3 py-[3px] text-center">7-Day Free Trial</p>
+                  </div>
+                  <p class="flex items-baseline gap-1 text-white">
+                    <span class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">€4.60</span>
+                    <span class="text-white text-base font-bold leading-tight">/month</span>
+                  </p>
+                </div>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#302839] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Go Pro</span>
+                </button>
+                <div class="flex flex-col gap-2">
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-white">
+                    <div class="text-white" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Unlimited quote art downloads
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-white">
+                    <div class="text-white" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Ad-free experience
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-white">
+                    <div class="text-white" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Priority support
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-[#473b54] bg-[#211c27] p-6">
+                <div class="flex flex-col gap-1">
+                  <div class="flex items-center justify-between">
+                    <h1 class="text-white text-base font-bold leading-tight">Annual</h1>
+                    <p class="text-white text-xs font-medium leading-normal tracking-[0.015em] rounded-lg bg-[#8013ec] px-3 py-[3px] text-center">7-Day Free Trial</p>
+                  </div>
+                  <p class="flex items-baseline gap-1 text-white">
+                    <span class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">€18.50</span>
+                    <span class="text-white text-base font-bold leading-tight">/year</span>
+                  </p>
+                </div>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#302839] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Go Pro (7-Day Free Trial)</span>
+                </button>
+                <div class="flex flex-col gap-2">
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-white">
+                    <div class="text-white" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Unlimited quote art downloads
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-white">
+                    <div class="text-white" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Ad-free experience
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-white">
+                    <div class="text-white" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Priority support
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-white">
+                    <div class="text-white" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Save 50%
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-[#473b54] bg-[#211c27] p-6">
+                <div class="flex flex-col gap-1">
+                  <div class="flex items-center justify-between">
+                    <h1 class="text-white text-base font-bold leading-tight">Lifetime</h1>
+                    <p class="text-white text-xs font-medium leading-normal tracking-[0.015em] rounded-lg bg-[#8013ec] px-3 py-[3px] text-center">Best Value</p>
+                  </div>
+                  <span class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">€37.00</span>
+                </div>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#302839] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Go Pro</span>
+                </button>
+                <div class="flex flex-col gap-2">
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-white">
+                    <div class="text-white" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Unlimited quote art downloads
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-white">
+                    <div class="text-white" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Ad-free experience
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-white">
+                    <div class="text-white" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Priority support
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-white">
+                    <div class="text-white" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    One-time purchase
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 id="faq" class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">FAQ</h2>
+            <div class="flex flex-col p-4 gap-3">
+              <details class="flex flex-col rounded-lg border border-[#473b54] bg-[#141118] px-[15px] py-[7px] group" open="">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-white text-sm font-medium leading-normal">Is my data private?</p>
+                  <div class="text-white group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#ab9db9] text-sm font-normal leading-normal pb-2">
+                  Yes. Your data stays on your device and in your private backups. We never sell or share personal information.
+                </p>
+              </details>
+              <details class="flex flex-col rounded-lg border border-[#473b54] bg-[#141118] px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-white text-sm font-medium leading-normal">Can I use the app offline?</p>
+                  <div class="text-white group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#ab9db9] text-sm font-normal leading-normal pb-2">
+                  Yes. Elevate Quotes includes an offline database so you can browse and create quote art without internet access.
+                </p>
+              </details>
+              <details class="flex flex-col rounded-lg border border-[#473b54] bg-[#141118] px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-white text-sm font-medium leading-normal">How do I upgrade or cancel Pro?</p>
+                  <div class="text-white group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#ab9db9] text-sm font-normal leading-normal pb-2">
+                  Manage your subscription through the App Store or Google Play. You can upgrade, cancel, or switch plans at any time from the store settings.
+                </p>
+              </details>
+              <details class="flex flex-col rounded-lg border border-[#473b54] bg-[#141118] px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-white text-sm font-medium leading-normal">Which devices are supported?</p>
+                  <div class="text-white group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#ab9db9] text-sm font-normal leading-normal pb-2">
+                  Elevate Quotes works on modern iOS and Android phones and tablets. We recommend iOS 15+ or Android 10+ for the best experience.
+                </p>
+              </details>
+              <details class="flex flex-col rounded-lg border border-[#473b54] bg-[#141118] px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-white text-sm font-medium leading-normal">How do notifications work?</p>
+                  <div class="text-white group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#ab9db9] text-sm font-normal leading-normal pb-2">
+                  You can enable hourly reminders in the app. We schedule smart delivery windows so you’re not disturbed at night and can adjust frequency at any time in Settings.
+                </p>
+              </details>
+              <details class="flex flex-col rounded-lg border border-[#473b54] bg-[#141118] px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-white text-sm font-medium leading-normal">Can I export/share quote art without watermark?</p>
+                  <div class="text-white group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#ab9db9] text-sm font-normal leading-normal pb-2">
+                  Yes. Pro plans let you export high‑resolution images without watermark and share directly to social platforms or save to your gallery.
+                </p>
+              </details>
+            </div>
+            
+          </div>
         </div>
+        <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
+            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                <a class="text-[#ab9db9] text-base font-normal leading-normal min-w-40" href="/privacy.html">Privacy Policy</a>
+                <a class="text-[#ab9db9] text-base font-normal leading-normal min-w-40" href="/terms.html">Terms of Service</a>
+              </div>
+              <p class="text-[#ab9db9] text-base font-normal leading-normal">
+                Contact: <a class="underline hover:text-white" href="mailto:elevatequotes@wildcattrio.com">elevatequotes@wildcattrio.com</a>
+              </p>
+              <p class="text-[#ab9db9] text-base font-normal leading-normal">© 2025 Elevate Quotes. All rights reserved.</p>
+            </footer>
+          </div>
+        </footer>
       </div>
-    </section>
-
-    <!-- Features -->
-    <section class="py-24 px-4" style="background: #111111;">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white text-center mb-16">Everything you need, nothing you don't</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white/5 border border-white/10 rounded-xl p-6">
-            <div class="text-3xl mb-4">📖</div>
-            <h3 class="text-white font-semibold text-lg mb-2">Massive Library</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">400,000+ quotes across motivation, philosophy, love, mental health, literature, business, and hundreds more categories.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-xl p-6">
-            <div class="text-3xl mb-4">🎨</div>
-            <h3 class="text-white font-semibold text-lg mb-2">Quote Card Creator</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">Turn any quote into a stunning image. 100+ backgrounds, 12+ fonts, custom colours. Perfect for Instagram, WhatsApp & more.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-xl p-6">
-            <div class="text-3xl mb-4">🔔</div>
-            <h3 class="text-white font-semibold text-lg mb-2">Daily Inspiration</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">Scheduled motivational notifications. Start every morning with the right mindset. Fresh quotes delivered daily.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-xl p-6">
-            <div class="text-3xl mb-4">⭐</div>
-            <h3 class="text-white font-semibold text-lg mb-2">Save Favourites</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">Bookmark quotes that resonate with you. Build your personal collection and revisit them anytime.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-xl p-6">
-            <div class="text-3xl mb-4">🔍</div>
-            <h3 class="text-white font-semibold text-lg mb-2">Powerful Search</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">Search across 400k+ quotes instantly. Browse by author, explore categories, discover quotes from literature.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-xl p-6">
-            <div class="text-3xl mb-4">💎</div>
-            <h3 class="text-white font-semibold text-lg mb-2">Completely Free</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">Every feature available to everyone. No paywalls, no locked content, no premium tiers. Just quotes.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-24 px-4 text-center">
-      <div class="max-w-2xl mx-auto">
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-6">Elevate your mind, one quote at a time</h2>
-        <p class="text-gray-400 mb-10">Whether you need motivation for a tough Monday, the perfect quote for a social media post, or just a moment of reflection — we've got the words.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.wildcattrio.elevatequotes" class="inline-flex items-center gap-3 bg-gold-500 text-black font-semibold px-8 py-4 rounded-full text-lg hover:bg-gold-400 transition-colors">
-          Download Free on Google Play
-        </a>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="border-t border-white/10 py-8 px-4" style="background: #111111;">
-      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-        <p>&copy; 2026 WildCat Trio Limited. All rights reserved.</p>
-        <div class="flex gap-6">
-          <a href="/privacy.html" class="hover:text-gold-400 transition-colors">Privacy Policy</a>
-          <a href="/terms.html" class="hover:text-gold-400 transition-colors">Terms of Service</a>
-          <a href="mailto:elevatequotes@wildcattrio.com" class="hover:text-gold-400 transition-colors">Contact</a>
-        </div>
-      </div>
-    </footer>
+    </div>
+  
   </body>
 </html>
+
+
