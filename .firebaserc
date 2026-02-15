@@ -5,26 +5,42 @@
   "targets": {
     "wildcattrio-web-prod": {
       "hosting": {
-        "wildcattrio-web-prod": ["wildcattrio-web-prod"],
-        "wildcattrio-www": ["wildcattrio-web-prod"]
+        "wildcattrio-web-prod": [
+          "wildcattrio-web-prod"
+        ],
+        "wildcattrio-www": [
+          "wildcattrio-web-prod"
+        ]
       }
     },
     "elevatequotes-web-prod": {
       "hosting": {
-        "elevatequotes-web-prod": ["elevatequotes-web-prod"]
+        "elevatequotes-web-prod": [
+          "elevatequotes-web-prod"
+        ]
       }
     },
     "calsmartai-web-prod": {
       "hosting": {
-        "calsmartai-web-prod": ["calsmartai-web-prod"]
+        "calsmartai-web-prod": [
+          "calsmartai-web-prod"
+        ]
       }
     },
     "inward-web-prod": {
       "hosting": {
-        "inward-web-prod": ["inward-web-prod"]
+        "inward-web-prod": [
+          "inward-web-prod"
+        ]
+      }
+    },
+    "inward-f9523": {
+      "hosting": {
+        "inward-web-prod": [
+          "inward-f9523"
+        ]
       }
     }
-  }
+  },
+  "etags": {}
 }
-
-
