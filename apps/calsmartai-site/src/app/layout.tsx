@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   description: "Track your calories effortlessly with AI. Snap a photo of any meal and get instant nutrition info. AI-powered food recognition, barcode scanner, voice logging, and more.",
   keywords: ["calorie tracker", "AI food recognition", "nutrition app", "meal tracking", "calorie counter", "macro tracker", "health app"],
   authors: [{ name: "WildCat Trio Limited" }],
+  icons: {
+    icon: "/favicon.png",
+    apple: "/images/icon-192.png",
+  },
   openGraph: {
     title: "CalSmart AI — Point. Snap. Logged.",
     description: "Track your calories effortlessly with AI. Snap a photo of any meal and get instant nutrition info.",

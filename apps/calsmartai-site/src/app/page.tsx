@@ -8,7 +8,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
-              <span className="w-3 h-3 bg-[#00E682] rounded-full"></span>
+              <Image src="/images/icon-nav.png" alt="CalSmart AI" width={28} height={28} className="rounded-md" />
               <span className="text-xl font-bold">CalSmart AI</span>
             </div>
             <div className="hidden md:flex items-center gap-8">
@@ -32,8 +32,10 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <div className="flex-1 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 bg-[#142317] px-4 py-2 rounded-full mb-6">
-                <span className="w-2 h-2 bg-[#00E682] rounded-full animate-pulse"></span>
-                <span className="text-[#BED2C8] text-sm">Powered by Google Gemini AI</span>
+                <svg className="w-4 h-4 text-[#00E682]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span className="text-[#BED2C8] text-sm">AI-powered calorie tracking</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Point. Snap.
@@ -460,7 +462,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="flex items-center gap-2">
-              <span className="w-3 h-3 bg-[#00E682] rounded-full"></span>
+              <Image src="/images/icon-nav.png" alt="CalSmart AI" width={28} height={28} className="rounded-md" />
               <span className="text-xl font-bold">CalSmart AI</span>
             </div>
             <div className="flex flex-wrap gap-6 text-[#BED2C8]">
