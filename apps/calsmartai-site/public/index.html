@@ -60,6 +60,25 @@
       @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
       .feature-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #27AE60, #38E07B); }
     </style>
+    <!-- Endorsely Affiliate Tracking -->
+    <script async src="https://assets.endorsely.com/endorsely.js" data-endorsely="6926ef64-a942-44df-ab2b-809b9eb79811"></script>
+    <script>
+      // Capture affiliate referral and store for app attribution
+      document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const via = urlParams.get('via');
+        if (via) {
+          localStorage.setItem('calsmart_referral', via);
+          // Add referral code to Play Store link for tracking
+          const playLinks = document.querySelectorAll('a[href*="play.google.com"]');
+          playLinks.forEach(link => {
+            const url = new URL(link.href);
+            url.searchParams.set('referrer', 'utm_source%3Daffiliate%26utm_medium%3Dreferral%26utm_campaign%3D' + via);
+            link.href = url.toString();
+          });
+        }
+      });
+    </script>
   </head>
   <body class="bg-dark-900 text-white antialiased">
 
@@ -75,7 +94,7 @@
           <a href="#how-it-works" class="text-sm text-gray-400 hover:text-white transition">How It Works</a>
           <a href="#faq" class="text-sm text-gray-400 hover:text-white transition">FAQ</a>
         </div>
-        <a href="#download" class="bg-green-600 hover:bg-green-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition">
+        <a href="https://play.google.com/store/apps/details?id=com.wildcattrio.calsmart" target="_blank" rel="noopener" class="bg-green-600 hover:bg-green-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition">
           Download Free
         </a>
       </div>
@@ -314,7 +333,7 @@
           <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
             <a href="/privacy.html" class="hover:text-white transition">Privacy Policy</a>
             <a href="/terms.html" class="hover:text-white transition">Terms of Service</a>
-            <a href="mailto:calsmart@wildcattrio.com" class="hover:text-white transition">Contact</a>
+            <a href="mailto:calsmartai@wildcattrio.com" class="hover:text-white transition">Contact</a>
           </div>
         </div>
         <p class="text-center text-gray-500 text-sm mt-6">
