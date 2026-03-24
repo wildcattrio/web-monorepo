@@ -1,639 +1,348 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WildCat Trio — Privacy-First Apps, Crafted in Ireland</title>
-  <meta name="description" content="WildCat Trio builds beautiful, privacy-first mobile apps. CalSmart AI, Inward, and Elevate Quotes — made with care in Ireland." />
-  <meta property="og:title" content="WildCat Trio — Privacy-First Apps, Crafted in Ireland" />
-  <meta property="og:description" content="Three cats. Three apps. One indie studio building apps that respect you." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wildcattrio.com" />
-  <meta name="theme-color" content="#0A0A0F" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WildCat Trio Limited — Consumer AI Apps Built in Ireland</title>
+<meta content="WildCat Trio Limited is an Irish startup building consumer mobile apps powered by AI. Our products include CalSmart AI, Elevate Quotes, and Inward Journal." name="description"/>
+<link href="https://wildcattrio.com" rel="canonical"/>
+<meta property="og:title" content="WildCat Trio Limited — Consumer AI Apps Built in Ireland"/>
+<meta property="og:description" content="WildCat Trio Limited is an Irish startup building consumer mobile apps powered by AI. Discover CalSmart AI, Elevate Quotes, and Inward Journal."/>
+<meta property="og:url" content="https://wildcattrio.com"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="theme-color" content="#10B981"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    primary: "#10B981",
+                    "primary-dark": "#059669",
+                    "background-light": "#F9FAFB",
+                    "background-dark": "#111827",
+                    "card-light": "#FFFFFF",
+                    "card-dark": "#1F2937",
+                    "text-light": "#1F2937",
+                    "text-dark": "#F9FAFB",
+                    "text-secondary-light": "#6B7280",
+                    "text-secondary-dark": "#9CA3AF"
+                },
+                fontFamily: {
+                    display: ["Inter", "sans-serif"],
+                },
+                borderRadius: {
+                    DEFAULT: "0.75rem",
+                },
+            },
+        },
+    };
+</script>
+<style>
+    .material-icons-outlined { font-size: inherit; }
+</style>
+<!-- GA4: Corporate -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SKZ2XXQMG7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-SKZ2XXQMG7');
+</script>
 </head>
-<body>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-display antialiased">
 
-  <!-- Loading Screen -->
-  <div id="loader" class="loader">
-    <div class="loader-inner">
-      <div class="loader-cats">
-        <span class="loader-cat" style="--delay:0s">🐱</span>
-        <span class="loader-cat" style="--delay:0.2s">🐱</span>
-        <span class="loader-cat" style="--delay:0.4s">🐱</span>
-      </div>
-      <div class="loader-text">WildCat Trio</div>
-      <div class="loader-bar"><div class="loader-fill"></div></div>
-    </div>
-  </div>
+<!-- Header -->
+<header class="py-6 px-4 sm:px-6 lg:px-8">
+<div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-text-light dark:text-text-dark">WildCat Trio <span class="text-primary">Limited</span></h1>
+    <nav class="hidden md:flex items-center space-x-6">
+        <a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#products">Products</a>
+        <a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#about">About</a>
+        <a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#technology">Technology</a>
+        <a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#contact">Contact</a>
+    </nav>
+</div>
+</header>
 
-  <!-- Navigation -->
-  <nav id="nav" class="nav">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo">
-        <span class="nav-logo-mark">🐱</span>
-        <span class="nav-logo-text">WildCat Trio</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#apps" class="nav-link">Apps</a></li>
-        <li><a href="#story" class="nav-link">Story</a></li>
-        <li><a href="#founder" class="nav-link">Founder</a></li>
-        <li><a href="#cats" class="nav-link">The Cats</a></li>
-      </ul>
-      <a href="https://play.google.com/store/apps/developer?id=WildCat+Trio" target="_blank" rel="noopener" class="nav-cta btn btn-ghost">
-        Google Play ↗
-      </a>
-      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="nav-mobile" id="navMobile">
-      <a href="#apps" class="nav-mobile-link">Apps</a>
-      <a href="#story" class="nav-mobile-link">Story</a>
-      <a href="#founder" class="nav-mobile-link">Founder</a>
-      <a href="#cats" class="nav-mobile-link">The Cats</a>
-      <a href="https://play.google.com/store" target="_blank" class="nav-mobile-link accent">Google Play ↗</a>
-    </div>
-  </nav>
+<main class="container mx-auto px-4 sm:px-6 lg:px-8">
 
-  <!-- ─── HERO ─── -->
-  <section id="hero" class="hero">
-    <div class="hero-bg">
-      <div class="hero-orb hero-orb-1"></div>
-      <div class="hero-orb hero-orb-2"></div>
-      <div class="hero-orb hero-orb-3"></div>
-      <canvas id="particleCanvas" class="hero-particles"></canvas>
+<!-- Hero -->
+<section class="text-center py-20 lg:py-32">
+    <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight text-text-light dark:text-text-dark">Consumer AI apps,<br/>built in Ireland.</h2>
+    <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-text-secondary-light dark:text-text-secondary-dark">WildCat Trio Limited is an Irish startup building privacy-first mobile apps powered by artificial intelligence. Our products are live on the Google Play Store, helping real people solve everyday problems — from tracking nutrition to finding daily inspiration.</p>
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a class="bg-primary text-white font-semibold py-3 px-8 rounded-lg hover:bg-primary-dark transition-colors" href="#products">Our Products</a>
+        <a class="border-2 border-primary text-primary font-semibold py-3 px-8 rounded-lg hover:bg-primary hover:text-white transition-colors" href="#about">About Us</a>
     </div>
-    <div class="hero-content">
-      <div class="hero-eyebrow reveal-up">
-        <span class="eyebrow-dot"></span>
-        Indie App Studio · Ireland
-      </div>
-      <h1 class="hero-title reveal-up" style="--delay: 0.1s">
-        <span class="hero-title-line">WildCat</span>
-        <span class="hero-title-line gradient-text">Trio</span>
-      </h1>
-      <p class="hero-subtitle reveal-up" style="--delay: 0.2s">
-        Three cats. Three apps.<br />
-        One indie studio building tools<br />
-        that respect your privacy.
-      </p>
-      <div class="hero-actions reveal-up" style="--delay: 0.3s">
-        <a href="#apps" class="btn btn-primary">
-          Explore Apps
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+</section>
+
+<!-- Products -->
+<section class="py-16 lg:py-24" id="products">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark">Our Products</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-text-secondary-light dark:text-text-secondary-dark">Apps designed for real people. Privacy-first, AI-powered, and available on the Google Play Store.</p>
+    </div>
+
+    <!-- CalSmart AI -->
+    <div class="bg-card-light dark:bg-card-dark rounded-lg shadow-lg p-8 md:p-12 mb-12">
+        <div class="flex flex-col md:flex-row md:items-start gap-8">
+            <div class="flex-shrink-0">
+                <img alt="CalSmart AI" class="h-20 w-20 rounded-[22%] shadow-md" src="/images/calsmart_ai.png"/>
+            </div>
+            <div class="flex-grow">
+                <h3 class="text-3xl font-bold text-text-light dark:text-text-dark">CalSmart AI</h3>
+                <p class="mt-1 text-primary font-semibold">AI-Powered Calorie Tracking</p>
+                <p class="mt-4 text-text-secondary-light dark:text-text-secondary-dark text-lg">Snap a photo of your food, speak your meal, or scan a barcode — CalSmart AI handles the rest. Powered by Google Gemini AI, it delivers instant calorie and macro breakdowns without the tedious manual entry of traditional trackers.</p>
+                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="flex items-center space-x-2 text-text-secondary-light dark:text-text-secondary-dark">
+                        <span class="material-icons-outlined text-primary text-xl">photo_camera</span>
+                        <span>AI food recognition from photos</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-text-secondary-light dark:text-text-secondary-dark">
+                        <span class="material-icons-outlined text-primary text-xl">mic</span>
+                        <span>Voice meal logging</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-text-secondary-light dark:text-text-secondary-dark">
+                        <span class="material-icons-outlined text-primary text-xl">qr_code_scanner</span>
+                        <span>Barcode scanner — millions of products</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-text-secondary-light dark:text-text-secondary-dark">
+                        <span class="material-icons-outlined text-primary text-xl">restaurant</span>
+                        <span>AI recipe generation</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-text-secondary-light dark:text-text-secondary-dark">
+                        <span class="material-icons-outlined text-primary text-xl">fitness_center</span>
+                        <span>AI exercise logging</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-text-secondary-light dark:text-text-secondary-dark">
+                        <span class="material-icons-outlined text-primary text-xl">sync</span>
+                        <span>Health Connect &amp; Apple Health</span>
+                    </div>
+                </div>
+                <p class="mt-6 text-sm text-text-secondary-light dark:text-text-secondary-dark"><strong>Business model:</strong> Free to download with optional Pro subscription for advanced features.</p>
+                <div class="mt-6 flex flex-wrap items-center gap-4">
+                    <a class="bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-primary-dark transition-colors" href="https://play.google.com/store/apps/details?id=com.wildcattrio.calsmart" target="_blank" rel="noopener">Google Play</a>
+                    <a class="text-primary font-semibold hover:underline" href="https://calsmartai.wildcattrio.com" target="_blank" rel="noopener">Product Website →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Elevate Quotes -->
+    <div class="bg-card-light dark:bg-card-dark rounded-lg shadow-lg p-8 md:p-12 mb-12">
+        <div class="flex flex-col md:flex-row md:items-start gap-8">
+            <div class="flex-shrink-0">
+                <img alt="Elevate Quotes" class="h-20 w-20 rounded-[22%] shadow-md" src="/images/eq_foreground_512.png"/>
+            </div>
+            <div class="flex-grow">
+                <h3 class="text-3xl font-bold text-text-light dark:text-text-dark">Elevate Quotes</h3>
+                <p class="mt-1 text-primary font-semibold">Daily Inspiration &amp; Quote Creation</p>
+                <p class="mt-4 text-text-secondary-light dark:text-text-secondary-dark text-lg">A massive offline database of over 400,000 curated quotes with powerful creation tools. Set your schedule, discover new perspectives, and create shareable quote cards — all without needing an internet connection.</p>
+                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="flex items-center space-x-2 text-text-secondary-light dark:text-text-secondary-dark">
+                        <span class="material-icons-outlined text-primary text-xl">format_quote</span>
+                        <span>400,000+ quotes available offline</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-text-secondary-light dark:text-text-secondary-dark">
+                        <span class="material-icons-outlined text-primary text-xl">brush</span>
+                        <span>Quote card creation tools</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-text-secondary-light dark:text-text-secondary-dark">
+                        <span class="material-icons-outlined text-primary text-xl">notifications</span>
+                        <span>Scheduled daily inspiration</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-text-secondary-light dark:text-text-secondary-dark">
+                        <span class="material-icons-outlined text-primary text-xl">bookmark</span>
+                        <span>Collections &amp; favourites</span>
+                    </div>
+                </div>
+                <p class="mt-6 text-sm text-text-secondary-light dark:text-text-secondary-dark"><strong>Business model:</strong> Free with optional premium subscription for advanced creation tools and features.</p>
+                <div class="mt-6 flex flex-wrap items-center gap-4">
+                    <a class="bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-primary-dark transition-colors" href="https://play.google.com/store/apps/details?id=com.wildcattrio.elevatequotes" target="_blank" rel="noopener">Google Play</a>
+                    <a class="text-primary font-semibold hover:underline" href="https://elevatequotes.wildcattrio.com" target="_blank" rel="noopener">Product Website →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inward Journal -->
+    <div class="bg-card-light dark:bg-card-dark rounded-lg shadow-lg p-8 md:p-12">
+        <div class="flex flex-col md:flex-row md:items-start gap-8">
+            <div class="flex-shrink-0">
+                <div class="h-20 w-20 rounded-[22%] shadow-md bg-purple-600 flex items-center justify-center">
+                    <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+                </div>
+            </div>
+            <div class="flex-grow">
+                <h3 class="text-3xl font-bold text-text-light dark:text-text-dark">Inward Journal</h3>
+                <p class="mt-1 text-purple-600 font-semibold">AI Journaling Companion</p>
+                <p class="mt-4 text-text-secondary-light dark:text-text-secondary-dark text-lg">An AI-powered journal that remembers you. Track your mood, uncover patterns in your thinking, and have meaningful conversations about your inner world. Your journal entries stay private and on-device.</p>
+                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="flex items-center space-x-2 text-text-secondary-light dark:text-text-secondary-dark">
+                        <span class="material-icons-outlined text-purple-600 text-xl">psychology</span>
+                        <span>AI-powered journaling conversations</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-text-secondary-light dark:text-text-secondary-dark">
+                        <span class="material-icons-outlined text-purple-600 text-xl">mood</span>
+                        <span>Mood tracking &amp; pattern insights</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-text-secondary-light dark:text-text-secondary-dark">
+                        <span class="material-icons-outlined text-purple-600 text-xl">lock</span>
+                        <span>Private, on-device storage</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-text-secondary-light dark:text-text-secondary-dark">
+                        <span class="material-icons-outlined text-purple-600 text-xl">auto_awesome</span>
+                        <span>AI remembers your context</span>
+                    </div>
+                </div>
+                <p class="mt-6 text-sm text-text-secondary-light dark:text-text-secondary-dark"><strong>Status:</strong> Coming soon to Google Play &amp; App Store.</p>
+                <div class="mt-6">
+                    <a class="text-purple-600 font-semibold hover:underline" href="https://inward.wildcattrio.com" target="_blank" rel="noopener">Product Website →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section class="py-16 lg:py-24" id="about">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark">About Us</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-text-secondary-light dark:text-text-secondary-dark">A small Irish startup building products people actually use.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <!-- Company -->
+        <div class="bg-card-light dark:bg-card-dark rounded-lg shadow-lg p-8 md:p-10">
+            <h3 class="text-2xl font-bold text-text-light dark:text-text-dark">Our Story</h3>
+            <p class="mt-4 text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">WildCat Trio Limited is a registered Irish software company building consumer mobile applications. We're focused on creating high-quality, privacy-first apps that use AI to simplify everyday tasks.</p>
+            <p class="mt-4 text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">We're a small, early-stage startup — bootstrapped, independent, and shipping real products to real users on the Google Play Store. Our flagship product, CalSmart AI, uses Google Gemini AI as its core intelligence, with Firebase and Google Cloud powering the entire backend.</p>
+            <p class="mt-4 text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">We believe AI should make everyday tasks easier, not more complicated. That's why we focus on practical applications — food tracking you can do with a photo, journaling that actually understands you, and inspiration delivered on your schedule.</p>
+        </div>
+
+        <!-- Founder -->
+        <div class="bg-card-light dark:bg-card-dark rounded-lg shadow-lg p-8 md:p-10">
+            <h3 class="text-2xl font-bold text-text-light dark:text-text-dark">Founder</h3>
+            <div class="mt-6">
+                <div class="flex items-center space-x-4">
+                    <div class="h-16 w-16 rounded-full bg-primary flex items-center justify-center">
+                        <span class="text-white text-2xl font-bold">WM</span>
+                    </div>
+                    <div>
+                        <p class="text-xl font-bold text-text-light dark:text-text-dark">William Meyler</p>
+                        <p class="text-primary font-semibold">Founder &amp; CEO</p>
+                    </div>
+                </div>
+                <p class="mt-6 text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">Based in Ireland, William founded WildCat Trio to build consumer AI products that solve real problems for everyday users. He leads product development, engineering, and business strategy across the company's portfolio of mobile apps.</p>
+                <div class="mt-6 flex flex-wrap gap-4">
+                    <a class="inline-flex items-center space-x-2 text-text-secondary-light hover:text-primary transition-colors" href="https://www.linkedin.com/in/william-meyler/" target="_blank" rel="noopener">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a class="inline-flex items-center space-x-2 text-text-secondary-light hover:text-primary transition-colors" href="https://x.com/wild_cat_trio" target="_blank" rel="noopener">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        <span>@wild_cat_trio</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technology -->
+<section class="py-16 lg:py-24" id="technology">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark">Built on Google Cloud</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-text-secondary-light dark:text-text-secondary-dark">Our products are built on Google's AI and cloud infrastructure from the ground up.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md text-center">
+            <span class="material-icons-outlined text-4xl text-primary">auto_awesome</span>
+            <h3 class="mt-4 text-lg font-semibold text-text-light dark:text-text-dark">Google Gemini AI</h3>
+            <p class="mt-2 text-sm text-text-secondary-light dark:text-text-secondary-dark">Core intelligence powering food recognition, voice processing, and recipe generation.</p>
+        </div>
+        <div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md text-center">
+            <span class="material-icons-outlined text-4xl text-primary">local_fire_department</span>
+            <h3 class="mt-4 text-lg font-semibold text-text-light dark:text-text-dark">Firebase</h3>
+            <p class="mt-2 text-sm text-text-secondary-light dark:text-text-secondary-dark">Authentication, Firestore database, Cloud Functions, and Hosting across all products.</p>
+        </div>
+        <div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md text-center">
+            <span class="material-icons-outlined text-4xl text-primary">cloud</span>
+            <h3 class="mt-4 text-lg font-semibold text-text-light dark:text-text-dark">Google Cloud</h3>
+            <p class="mt-2 text-sm text-text-secondary-light dark:text-text-secondary-dark">Backend infrastructure, APIs, and services powering our entire stack.</p>
+        </div>
+        <div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md text-center">
+            <span class="material-icons-outlined text-4xl text-primary">smartphone</span>
+            <h3 class="mt-4 text-lg font-semibold text-text-light dark:text-text-dark">React Native</h3>
+            <p class="mt-2 text-sm text-text-secondary-light dark:text-text-secondary-dark">Cross-platform mobile development with Expo for Android and iOS.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Principles -->
+<section class="py-16 lg:py-24" id="principles">
+    <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark">Our Guiding Principles</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-text-secondary-light dark:text-text-secondary-dark">How we approach our work every day.</p>
+    </div>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="bg-card-light dark:bg-card-dark p-8 rounded-lg shadow-md">
+            <span class="material-icons-outlined text-4xl text-primary">privacy_tip</span>
+            <h3 class="mt-4 text-xl font-semibold text-text-light dark:text-text-dark">Privacy First</h3>
+            <p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark">We believe your data is yours. We minimise data collection and are transparent about what we use.</p>
+        </div>
+        <div class="bg-card-light dark:bg-card-dark p-8 rounded-lg shadow-md">
+            <span class="material-icons-outlined text-4xl text-primary">construction</span>
+            <h3 class="mt-4 text-xl font-semibold text-text-light dark:text-text-dark">High Craft</h3>
+            <p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark">From pixels to code, we obsess over the details to create intuitive and delightful experiences.</p>
+        </div>
+        <div class="bg-card-light dark:bg-card-dark p-8 rounded-lg shadow-md">
+            <span class="material-icons-outlined text-4xl text-primary">accessibility_new</span>
+            <h3 class="mt-4 text-xl font-semibold text-text-light dark:text-text-dark">Accessible to All</h3>
+            <p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark">Our apps are designed to be usable by everyone, regardless of ability or device.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="py-16 lg:py-24 bg-card-light dark:bg-card-dark rounded-lg" id="contact">
+    <div class="text-center px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-text-light dark:text-text-dark">Get In Touch</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-text-secondary-light dark:text-text-secondary-dark">For general inquiries, press, partnerships, or just to say hello.</p>
+        <div class="mt-8 space-y-4 text-lg">
+            <p class="flex items-center justify-center space-x-2">
+                <span class="material-icons-outlined text-primary">email</span>
+                <a class="hover:text-primary transition-colors" href="mailto:admin@wildcattrio.com">admin@wildcattrio.com</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="mt-24 py-12 bg-gray-100 dark:bg-gray-800">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-text-secondary-light dark:text-text-secondary-dark">
+    <p class="font-semibold text-text-light dark:text-text-dark">WildCat Trio Limited</p>
+    <p class="mt-2">Registered in Ireland · CRO Company</p>
+    <p class="mt-1">20 Harcourt Street, Dublin 2, D02 H364, Ireland</p>
+    <div class="mt-6 flex justify-center space-x-6">
+        <a class="hover:text-primary transition-colors" href="/privacy.html">Privacy Policy</a>
+        <a class="hover:text-primary transition-colors" href="/terms.html">Terms of Service</a>
+        <a class="hover:text-primary transition-colors" href="mailto:admin@wildcattrio.com">Contact</a>
+    </div>
+    <div class="mt-6 flex justify-center space-x-6">
+        <a class="hover:text-primary transition-colors" href="https://www.linkedin.com/in/william-meyler/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
-        <a href="#story" class="btn btn-ghost">Our Story</a>
-      </div>
-      <div class="hero-stats reveal-up" style="--delay: 0.4s">
-        <div class="stat">
-          <span class="stat-num" data-count="3">0</span>
-          <span class="stat-label">Apps on Play</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">🇮🇪</span>
-          <span class="stat-label">Made in Ireland</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">3</span>
-          <span class="stat-label">Cats Supervised</span>
-        </div>
-      </div>
+        <a class="hover:text-primary transition-colors" href="https://x.com/wild_cat_trio" target="_blank" rel="noopener" aria-label="X / Twitter">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
     </div>
-    <div class="hero-scroll-indicator">
-      <span>Scroll</span>
-      <div class="scroll-line"><div class="scroll-dot"></div></div>
-    </div>
-  </section>
+    <p class="mt-8 text-sm">© 2025 WildCat Trio Limited. All rights reserved.</p>
+</div>
+</footer>
 
-  <!-- ─── APPS ─── -->
-  <section id="apps" class="apps section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow reveal-up">Our Apps</span>
-        <h2 class="section-title reveal-up">
-          Built with care.<br />
-          <span class="gradient-text">Used every day.</span>
-        </h2>
-        <p class="section-sub reveal-up">
-          Every app we ship is designed to be simple, beautiful, and completely private. No ads. No data selling. Ever.
-        </p>
-      </div>
-
-      <!-- CalSmart AI -->
-      <div class="app-showcase reveal-slide" data-direction="left">
-        <div class="app-visual">
-          <div class="app-mockup app-mockup-calsmart">
-            <div class="mockup-screen">
-              <div class="mockup-header">
-                <div class="mockup-status-bar"></div>
-                <div class="mockup-title">CalSmart AI</div>
-              </div>
-              <div class="mockup-body">
-                <div class="mockup-photo-placeholder">
-                  <div class="mockup-camera-icon">📸</div>
-                  <div class="mockup-photo-label">Tap to snap your meal</div>
-                </div>
-                <div class="mockup-result">
-                  <div class="mockup-food-name">Avocado Toast</div>
-                  <div class="mockup-macros">
-                    <div class="macro"><span>380</span>kcal</div>
-                    <div class="macro"><span>12g</span>protein</div>
-                    <div class="macro"><span>18g</span>fat</div>
-                    <div class="macro"><span>42g</span>carbs</div>
-                  </div>
-                  <div class="mockup-log-btn">✓ Log it</div>
-                </div>
-                <div class="mockup-ring-container">
-                  <svg class="progress-ring" viewBox="0 0 80 80">
-                    <circle cx="40" cy="40" r="32" class="ring-bg"/>
-                    <circle cx="40" cy="40" r="32" class="ring-fill ring-calsmart" stroke-dasharray="201" stroke-dashoffset="60"/>
-                  </svg>
-                  <div class="ring-label">1,540<br/><span>/ 2,100</span></div>
-                </div>
-              </div>
-            </div>
-            <div class="mockup-glow mockup-glow-orange"></div>
-          </div>
-        </div>
-        <div class="app-info">
-          <div class="app-badge" style="--badge-color: #FF6B35">
-            <span class="badge-dot"></span>
-            AI Calorie Tracker
-          </div>
-          <h3 class="app-name">CalSmart AI</h3>
-          <p class="app-tagline">Snap. Track. Done.</p>
-          <p class="app-desc">
-            Point your camera at any meal and get instant nutritional analysis powered by AI. No manual logging. No barcode scanning. Just take a photo and you're done.
-          </p>
-          <ul class="app-features">
-            <li>
-              <span class="feature-icon">📷</span>
-              <div>
-                <strong>Photo Recognition</strong>
-                <span>AI identifies food instantly from a photo</span>
-              </div>
-            </li>
-            <li>
-              <span class="feature-icon">🎯</span>
-              <div>
-                <strong>Goal Tracking</strong>
-                <span>Set calorie and macro targets, see progress daily</span>
-              </div>
-            </li>
-            <li>
-              <span class="feature-icon">🔒</span>
-              <div>
-                <strong>Privacy First</strong>
-                <span>Your food diary stays on your device</span>
-              </div>
-            </li>
-          </ul>
-          <div class="app-actions">
-            <a href="https://play.google.com/store" target="_blank" class="btn btn-primary btn-orange">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M3 20.5v-17c0-.83 1-.83 1.5-.5l14 8.5c.5.3.5 1 0 1.3l-14 8.5c-.5.3-1.5.3-1.5-.8z"/></svg>
-              Get on Play Store
-            </a>
-            <a href="night-lab/calsmart/index.html" class="btn btn-ghost">Learn More →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Inward Journal -->
-      <div class="app-showcase app-showcase-reverse reveal-slide" data-direction="right">
-        <div class="app-visual">
-          <div class="app-mockup app-mockup-inward">
-            <div class="mockup-screen">
-              <div class="mockup-header">
-                <div class="mockup-status-bar"></div>
-                <div class="mockup-title">Inward</div>
-              </div>
-              <div class="mockup-body mockup-body-journal">
-                <div class="journal-date">Thursday, March 12</div>
-                <div class="journal-mood">
-                  <span class="mood-label">How are you feeling?</span>
-                  <div class="mood-icons">
-                    <span>😔</span><span>😐</span><span class="mood-active">😊</span><span>😄</span><span>🤩</span>
-                  </div>
-                </div>
-                <div class="journal-entry">
-                  <div class="journal-cursor">Today was actually a pretty good day. I shipped a new feature and—<span class="cursor-blink">|</span></div>
-                </div>
-                <div class="journal-ai-prompt">
-                  <span class="ai-badge">✨ AI</span>
-                  <span>What made today's win feel meaningful to you?</span>
-                </div>
-                <div class="journal-tags">
-                  <span class="tag">#productive</span>
-                  <span class="tag">#work</span>
-                  <span class="tag">#growth</span>
-                </div>
-              </div>
-            </div>
-            <div class="mockup-glow mockup-glow-purple"></div>
-          </div>
-        </div>
-        <div class="app-info">
-          <div class="app-badge" style="--badge-color: #7C3AED">
-            <span class="badge-dot"></span>
-            AI Journal
-          </div>
-          <h3 class="app-name">Inward</h3>
-          <p class="app-tagline">Your thoughts. Understood.</p>
-          <p class="app-desc">
-            A private journaling space that gently helps you reflect deeper. AI-powered prompts meet you where you are — no therapy-speak, just thoughtful questions that unlock real insight.
-          </p>
-          <ul class="app-features">
-            <li>
-              <span class="feature-icon">✍️</span>
-              <div>
-                <strong>Guided Reflection</strong>
-                <span>AI prompts tailored to what you're writing</span>
-              </div>
-            </li>
-            <li>
-              <span class="feature-icon">📊</span>
-              <div>
-                <strong>Mood Tracking</strong>
-                <span>See patterns in how you feel over time</span>
-              </div>
-            </li>
-            <li>
-              <span class="feature-icon">🔐</span>
-              <div>
-                <strong>End-to-End Private</strong>
-                <span>Encrypted. Your journal, forever yours.</span>
-              </div>
-            </li>
-          </ul>
-          <div class="app-actions">
-            <a href="https://play.google.com/store" target="_blank" class="btn btn-primary btn-purple">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M3 20.5v-17c0-.83 1-.83 1.5-.5l14 8.5c.5.3.5 1 0 1.3l-14 8.5c-.5.3-1.5.3-1.5-.8z"/></svg>
-              Get on Play Store
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Elevate Quotes -->
-      <div class="app-showcase reveal-slide" data-direction="left">
-        <div class="app-visual">
-          <div class="app-mockup app-mockup-elevate">
-            <div class="mockup-screen">
-              <div class="mockup-header">
-                <div class="mockup-status-bar"></div>
-                <div class="mockup-title">Elevate Quotes</div>
-              </div>
-              <div class="mockup-body mockup-body-quote">
-                <div class="quote-display">
-                  <div class="quote-marks">"</div>
-                  <div class="quote-text">The only way to do great work is to love what you do.</div>
-                  <div class="quote-author">— Steve Jobs</div>
-                </div>
-                <div class="quote-actions">
-                  <button class="quote-action">❤️</button>
-                  <button class="quote-action">📤</button>
-                  <button class="quote-action">🔄</button>
-                </div>
-                <div class="quote-categories">
-                  <span class="qcat active">Motivation</span>
-                  <span class="qcat">Wisdom</span>
-                  <span class="qcat">Success</span>
-                  <span class="qcat">Focus</span>
-                </div>
-                <div class="quote-streak">
-                  <span>🔥</span>
-                  <span>7-day streak</span>
-                </div>
-              </div>
-            </div>
-            <div class="mockup-glow mockup-glow-teal"></div>
-          </div>
-        </div>
-        <div class="app-info">
-          <div class="app-badge" style="--badge-color: #0EA5E9">
-            <span class="badge-dot"></span>
-            Daily Inspiration
-          </div>
-          <h3 class="app-name">Elevate Quotes</h3>
-          <p class="app-tagline">Words that move you.</p>
-          <p class="app-desc">
-            A beautifully curated collection of quotes to start your day right. Swipe, save your favourites, share the ones that hit — and build a daily reading habit that actually sticks.
-          </p>
-          <ul class="app-features">
-            <li>
-              <span class="feature-icon">📚</span>
-              <div>
-                <strong>Curated Collection</strong>
-                <span>Thousands of hand-picked quotes by category</span>
-              </div>
-            </li>
-            <li>
-              <span class="feature-icon">🔔</span>
-              <div>
-                <strong>Daily Reminders</strong>
-                <span>Morning quote delivered when you want it</span>
-              </div>
-            </li>
-            <li>
-              <span class="feature-icon">💾</span>
-              <div>
-                <strong>Save Favourites</strong>
-                <span>Build your personal quote library over time</span>
-              </div>
-            </li>
-          </ul>
-          <div class="app-actions">
-            <a href="https://play.google.com/store" target="_blank" class="btn btn-primary btn-teal">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M3 20.5v-17c0-.83 1-.83 1.5-.5l14 8.5c.5.3.5 1 0 1.3l-14 8.5c-.5.3-1.5.3-1.5-.8z"/></svg>
-              Get on Play Store
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ─── PRINCIPLES ─── -->
-  <section id="principles" class="principles section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow reveal-up">How We Build</span>
-        <h2 class="section-title reveal-up">
-          Small team.<br />
-          <span class="gradient-text">High standards.</span>
-        </h2>
-      </div>
-      <div class="principles-grid">
-        <div class="principle-card reveal-up" style="--delay: 0s">
-          <div class="principle-icon">🔒</div>
-          <h3>Privacy First</h3>
-          <p>Your data stays on your device. We don't sell it, share it, or build ad profiles from it. That's a promise, not a policy.</p>
-        </div>
-        <div class="principle-card reveal-up" style="--delay: 0.1s">
-          <div class="principle-icon">✨</div>
-          <h3>Craft Over Speed</h3>
-          <p>We'd rather ship one great feature than five mediocre ones. Every screen, every animation, every interaction is deliberate.</p>
-        </div>
-        <div class="principle-card reveal-up" style="--delay: 0.2s">
-          <div class="principle-icon">🎯</div>
-          <h3>Do One Thing Well</h3>
-          <p>Each app has a clear purpose. We resist feature creep. Simplicity isn't a constraint — it's a design decision.</p>
-        </div>
-        <div class="principle-card reveal-up" style="--delay: 0.3s">
-          <div class="principle-icon">🌍</div>
-          <h3>Built for Humans</h3>
-          <p>No dark patterns. No manipulative notifications. No "engagement" tricks. We build tools people actually enjoy using.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── STORY ─── -->
-  <section id="story" class="story section">
-    <div class="story-bg">
-      <div class="story-orb"></div>
-    </div>
-    <div class="container">
-      <div class="story-content">
-        <div class="story-text">
-          <span class="section-eyebrow reveal-up">Origin Story</span>
-          <h2 class="section-title reveal-up">
-            Named after<br />
-            <span class="gradient-text">three cats.</span>
-          </h2>
-          <div class="story-body">
-            <p class="reveal-up" style="--delay: 0.1s">
-              WildCat Trio wasn't born in a startup accelerator or a Silicon Valley garage. It started at a kitchen table in Ireland, with a laptop, an idea, and three very opinionated cats watching from the sofa.
-            </p>
-            <p class="reveal-up" style="--delay: 0.2s">
-              <strong>Santiago. Satoshi. Salem.</strong> The company is named after them — because they were there for every late-night debugging session, every "why won't this build," every breakthrough moment.
-            </p>
-            <p class="reveal-up" style="--delay: 0.3s">
-              The goal has always been simple: build apps that make daily life a little better. Apps that are genuinely useful, beautifully designed, and that respect the people using them. No VC pressure. No growth-at-all-costs. Just good software, made with care.
-            </p>
-          </div>
-        </div>
-        <div class="story-visual reveal-up" style="--delay: 0.2s">
-          <div class="cats-card">
-            <div class="cats-header">The Founding Team</div>
-            <div class="cats-grid">
-              <div class="cat-profile">
-                <div class="cat-avatar cat-santiago">
-                  <span>😸</span>
-                </div>
-                <div class="cat-name">Santiago</div>
-                <div class="cat-title">Chief Nap Officer</div>
-                <div class="cat-specialty">Expert at sitting on keyboards at critical moments</div>
-              </div>
-              <div class="cat-profile">
-                <div class="cat-avatar cat-satoshi">
-                  <span>😸</span>
-                </div>
-                <div class="cat-name">Satoshi</div>
-                <div class="cat-title">Head of Security</div>
-                <div class="cat-specialty">Ensures all doors are properly supervised</div>
-              </div>
-              <div class="cat-profile">
-                <div class="cat-avatar cat-salem">
-                  <span>😸</span>
-                </div>
-                <div class="cat-name">Salem</div>
-                <div class="cat-title">VP of Vibes</div>
-                <div class="cat-specialty">Sets the creative direction through strategic staring</div>
-              </div>
-            </div>
-            <div class="cats-footer">
-              <span>🐾</span> All major product decisions require cat approval
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── FOUNDER ─── -->
-  <section id="founder" class="founder section">
-    <div class="container">
-      <div class="founder-content">
-        <div class="founder-visual reveal-up">
-          <div class="founder-card">
-            <div class="founder-avatar">
-              <div class="founder-avatar-inner">W</div>
-              <div class="founder-avatar-ring"></div>
-            </div>
-            <div class="founder-location">
-              <span>🇮🇪</span> Ireland
-            </div>
-          </div>
-        </div>
-        <div class="founder-text">
-          <span class="section-eyebrow reveal-up">The Builder</span>
-          <h2 class="section-title reveal-up">
-            William Meyler
-          </h2>
-          <div class="founder-quote reveal-up" style="--delay: 0.1s">
-            <blockquote>"I'm not a trained developer. I'm someone who kept building things until they worked — and then kept making them better."</blockquote>
-          </div>
-          <div class="founder-bio reveal-up" style="--delay: 0.2s">
-            <p>
-              William is a self-taught builder from Ireland who learned to code by shipping real products. No bootcamp. No CS degree. Just curiosity, persistence, and three cats providing moral support.
-            </p>
-            <p>
-              He calls himself a "vibe coder" — someone who learns by doing, experiments constantly, and builds things that feel right. WildCat Trio is his studio, his lab, and his life's work in progress.
-            </p>
-          </div>
-          <div class="founder-tags reveal-up" style="--delay: 0.3s">
-            <span class="ftag">Self-taught</span>
-            <span class="ftag">Indie hacker</span>
-            <span class="ftag">Privacy advocate</span>
-            <span class="ftag">Cat dad</span>
-            <span class="ftag">🇮🇪 Irish</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── CATS SECTION ─── -->
-  <section id="cats" class="cats-section section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow reveal-up">The Board of Directors</span>
-        <h2 class="section-title reveal-up">
-          Meet the cats that<br />
-          <span class="gradient-text">run this company.</span>
-        </h2>
-        <p class="section-sub reveal-up">Officially, they're pets. Unofficially, they approve every product decision.</p>
-      </div>
-      <div class="cats-showcase">
-        <div class="cat-card reveal-up" style="--delay: 0s">
-          <div class="cat-card-inner">
-            <div class="cat-emoji-big">🐱</div>
-            <div class="cat-orb cat-orb-orange"></div>
-            <h3 class="cat-card-name">Santiago</h3>
-            <p class="cat-card-title">Chief Nap Officer · Co-founder</p>
-            <p class="cat-card-desc">The original. Santiago was there from day one, and has strong opinions about keyboard placement. Known for strategic interruptions at critical deployment moments.</p>
-            <div class="cat-card-skills">
-              <span>Napping</span>
-              <span>Keyboard QA</span>
-              <span>Demanding snacks</span>
-            </div>
-          </div>
-        </div>
-        <div class="cat-card reveal-up" style="--delay: 0.15s">
-          <div class="cat-card-inner">
-            <div class="cat-emoji-big">🐱</div>
-            <div class="cat-orb cat-orb-purple"></div>
-            <h3 class="cat-card-name">Satoshi</h3>
-            <p class="cat-card-title">Head of Security · Co-founder</p>
-            <p class="cat-card-desc">Named after the legendary Satoshi Nakamoto. Deeply suspicious of all visitors. Takes his security role extremely seriously, especially at 3am when everyone is sleeping.</p>
-            <div class="cat-card-skills">
-              <span>Perimeter patrol</span>
-              <span>Loud at 3am</span>
-              <span>Suspicious of strangers</span>
-            </div>
-          </div>
-        </div>
-        <div class="cat-card reveal-up" style="--delay: 0.3s">
-          <div class="cat-card-inner">
-            <div class="cat-emoji-big">🐱</div>
-            <div class="cat-orb cat-orb-teal"></div>
-            <h3 class="cat-card-name">Salem</h3>
-            <p class="cat-card-title">VP of Vibes · Co-founder</p>
-            <p class="cat-card-desc">The aesthetic one. Salem has never accepted a design he didn't approve of. He communicates design feedback through prolonged, unblinking eye contact from across the room.</p>
-            <div class="cat-card-skills">
-              <span>Design critique</span>
-              <span>Intense eye contact</span>
-              <span>Setting the vibe</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── CTA SECTION ─── -->
-  <section class="cta-section section">
-    <div class="container">
-      <div class="cta-card reveal-up">
-        <div class="cta-orb cta-orb-1"></div>
-        <div class="cta-orb cta-orb-2"></div>
-        <div class="cta-content">
-          <h2 class="cta-title">Try our apps today.</h2>
-          <p class="cta-sub">Privacy-first. Free to download. No ads. No nonsense.</p>
-          <div class="cta-apps">
-            <a href="https://play.google.com/store" target="_blank" class="cta-app-btn">
-              <div class="cta-app-icon" style="background: linear-gradient(135deg, #FF6B35, #FF8C55)">📷</div>
-              <div>
-                <div class="cta-app-name">CalSmart AI</div>
-                <div class="cta-app-sub">Snap. Track. Done.</div>
-              </div>
-            </a>
-            <a href="https://play.google.com/store" target="_blank" class="cta-app-btn">
-              <div class="cta-app-icon" style="background: linear-gradient(135deg, #7C3AED, #9D5CF6)">✍️</div>
-              <div>
-                <div class="cta-app-name">Inward</div>
-                <div class="cta-app-sub">Your thoughts, understood.</div>
-              </div>
-            </a>
-            <a href="https://play.google.com/store" target="_blank" class="cta-app-btn">
-              <div class="cta-app-icon" style="background: linear-gradient(135deg, #0EA5E9, #38BDF8)">✨</div>
-              <div>
-                <div class="cta-app-name">Elevate Quotes</div>
-                <div class="cta-app-sub">Words that move you.</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── FOOTER ─── -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <span>🐱</span> WildCat Trio
-          </div>
-          <p class="footer-tagline">Privacy-first apps, crafted in Ireland.</p>
-          <p class="footer-cats">Santiago 😸 · Satoshi 😸 · Salem 😸</p>
-        </div>
-        <div class="footer-links">
-          <div class="footer-col">
-            <h4>Apps</h4>
-            <a href="night-lab/calsmart/index.html">CalSmart AI</a>
-            <a href="https://play.google.com/store" target="_blank">Inward</a>
-            <a href="https://play.google.com/store" target="_blank">Elevate Quotes</a>
-          </div>
-          <div class="footer-col">
-            <h4>Company</h4>
-            <a href="#story">Our Story</a>
-            <a href="#founder">Founder</a>
-            <a href="#cats">The Cats</a>
-          </div>
-          <div class="footer-col">
-            <h4>Legal</h4>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Use</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 WildCat Trio Limited · Ireland · <a href="https://wildcattrio.com">wildcattrio.com</a></p>
-        <p>Made with ☕ and 🐾 in Ireland</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+</body></html>
